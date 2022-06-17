@@ -12,6 +12,7 @@ const commonStore = useCommonStore();
 </template>
 
 <style scoped lang="scss">
+@import "assets/css/global/public";
 .banner {
   @include flex;
   @include flex-ali-center;
