@@ -1,0 +1,285 @@
+header {
+  @include area(100%, 60px);
+  @include bgc(var(--my-cur-default-theme-bgc));
+  @include flex;
+  @include flex-ali-center;
+  @include flex-jus-spa-bet;
+  @include color(var(--my-cur-default-theme-color));
+  @include pad-2(0, 24px);
+  @include pof;
+  top: 0;
+  left: 0;
+  @include z-i(50);
+  @include box-s(var(--my-cur-default-theme-shadow));
+
+  .schedule {
+    @include pof;
+    top: 0;
+    left: 0;
+    @include area-h(3px);
+    @include bgc(var(--my-bright-active-theme-color));
+    @include trans;
+  }
+
+  h1 {
+    @include flex;
+    @include flex-ali-center;
+
+    img {
+      @include area(50px, 50px);
+    }
+
+    span {
+      @include fz(20px);
+      @include ml(5px);
+      @include color(var(--my-cur-default-theme-color));
+    }
+  }
+
+  .links {
+    @include flex;
+    @include flex-ali-center;
+    @include por;
+    @include area-h(100%);
+
+    .color-picker {
+      @include mr(10px);
+      @include cursor(pointer);
+      @include por;
+
+      i {
+        @include color(var(--my-bright-active-theme-color));
+        @include fz(23px);
+      }
+
+      .color-picker-menu {
+        @include pos;
+        left: 50%;
+        @include area(170px, 100px);
+        @include pad-1(20px);
+        @include color(var(--my-cur-default-theme-color));
+        @include bgc(var(--my-cur-default-theme-bgc));
+        @include box-s(var(--my-element-box-shadow-hover));
+        @include bdr(5px);
+        @include flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        span {
+          @include mb(10px);
+        }
+
+        ul {
+          @include flex;
+          @include bd(1px, solid, var(--my-cur-default-theme-color));
+          @include bdr(4px);
+          @include area-w(125px);
+          overflow: hidden;
+
+          li {
+            @include pad-2(4px, 6px);
+
+            &:nth-of-type(2) {
+              @include bd-l(1px, solid, var(--my-cur-default-theme-color));
+              @include bd-r(1px, solid, var(--my-cur-default-theme-color));
+            }
+          }
+
+          .active {
+            @include bgc(var(--my-bright-theme-color));
+          }
+        }
+      }
+
+      .show-picker, .hide-picker {
+        transition: transform 0.25s ease-in-out 0s, opacity 0.25s ease-in-out 0s;
+      }
+
+      .show-picker {
+        transform: translate(-50%, 10px);
+        opacity: 1;
+        visibility: visible;
+        @include show-opa-vis;
+      }
+
+      .hide-picker {
+        transform: translate(-50%, 20px);
+        @include hide-opa-vis;
+      }
+    }
+
+    .search {
+      @include por;
+      @include mr(10px);
+
+      i {
+        @include pos;
+        left: 7px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      input {
+        @include area(202px, 34px);
+        @include bd(1px, solid, var(--my-cur-default-theme-color));
+        @include bdr(5px);
+        @include pad-4(3px, 3px, 3px, 35px);
+        @include trans;
+        @include bgc(var(--my-cur-default-theme-bgc));
+        @include color(var(--my-cur-default-theme-color));
+      }
+
+      .focused {
+        @include trans;
+        border-color: var(--my-bright-theme-color);
+      }
+    }
+
+    .nav-links {
+      @include flex;
+      @include flex-ali-center;
+
+      .nav-item {
+        @include por;
+        @include flex;
+        @include flex-ali-center;
+        @include pad-2(0, 7px);
+        @include area-h(60px);
+
+        .link {
+          @include por;
+
+          .arrow {
+            @include pos;
+            top: 50%;
+            right: -13px;
+            transform: translateY(-50%);
+            @include bd-l(4px, solid, transparent);
+            @include bd-r(4px, solid, transparent);
+            @include bd-t(6px, solid, var(--my-cur-default-theme-color));
+            border-bottom: 0;
+          }
+        }
+
+        &:hover {
+          ul {
+            @include show-opa-vis;
+            transform: translate(-50%, 0);
+            @include box-s(var(--my-cur-default-theme-shadow-hover));
+          }
+        }
+
+        ul {
+          .pos;
+          left: 50%;
+          top: 60px;
+          transform: translateX(-50%);
+          @include area-w(105px);
+          @include bgc(var(--my-cur-default-theme-bgc));
+          @include pad-2(10px, 0);
+          @include bdr(6px);
+          @include hide-opa-vis;
+          transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s;
+          transform: translate(-50%, 20px);
+          @include box-s(var(--my-cur-default-theme-shadow));
+
+          li {
+            @include color(var(--my-cur-default-theme-color));
+            @include area-h(30px);
+            @include pad-2(0, 10px);
+
+            a {
+              display: block;
+              @include area(100%, 100%);
+              @include flex;
+              @include flex-ali-center;
+            }
+
+            &:hover {
+              a {
+                span, i {
+                  @include color(var(--my-bright-active-theme-color));
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .drop-down {
+        @include pr(17px);
+      }
+
+      .login-btn {
+        @include area-h(30px);
+        @include ml(10px);
+        @include bgc(var(--my-bright-active-theme-color));
+        @include color(#fff);
+
+        i {
+          @include color(#fff);
+          @include mr(5px);
+        }
+      }
+
+      .avatar {
+        @include por;
+        @include area-h(60px);
+        @include flex;
+        @include flex-ali-center;
+
+        /deep/ .vs-avatar-content {
+          @include area(30px, 30px);
+        }
+
+        .user-avatar {
+          @include ml(10px);
+          @include cursor(pointer);
+        }
+
+        &:hover {
+          ul {
+            @include show-opa-vis;
+            transform: translate(-50%, 0);
+            @include box-s(var(--my-cur-default-theme-shadow-hover));
+          }
+        }
+
+        .info-list {
+          @include pos;
+          left: 0;
+          top: 60px;
+          @include area-w(105px);
+          @include bgc(var(--my-cur-default-theme-bgc));
+          @include pad-2(10px, 0);
+          @include bdr(6px);
+          @include hide-opa-vis;
+          transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s;
+          transform: translate(-50%, 20px);
+          @include box-s(var(--my-cur-default-theme-shadow));
+
+          li {
+            @include color(var(--my-cur-default-theme-color));
+            @include area-h(30px);
+            @include pad-2(0, 10px);
+            @include cursor(pointer);
+            @include flex;
+            @include flex-ali-center;
+            @include flex-jus-spa-aro;
+
+            a {
+              display: block;
+              @include area(100%, 100%);
+              @include flex;
+              @include flex-ali-center;
+            }
+
+            &:hover {
+              @include color(var(--my-bright-active-theme-color));
+            }
+          }
+        }
+      }
+    }
+  }
+}

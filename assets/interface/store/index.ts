@@ -1,4 +1,4 @@
 export interface COMMON {
-  APP_NAME: string;
-  AVATAR: string;
+  APP_PROJECT_NAME: string;
+  APP_PROJECT_DESC: string;
 }
