@@ -1,6 +1,6 @@
 ## 资产目录
 
-link: [去文档](https://v3.nuxtjs.org/guide/directory-structure/assets)
+link: [go to documentation](https://v3.nuxtjs.org/guide/directory-structure/assets)
 
 `assets` 目录用于添加构建工具（webpack 或 Vite）将处理的所有网站资产
 

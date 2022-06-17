@@ -1,6 +1,6 @@
 ## 组件目录
 
-link: [去文档](https://v3.nuxtjs.org/guide/directory-structure/components)
+link: [go to documentation](https://v3.nuxtjs.org/guide/directory-structure/components)
 
 `components/` 目录是您放置所有 Vue 组件的地方，然后可以将这些组件导入到您的页面或其他组件中（了解更多）。
 
