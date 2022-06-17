@@ -1,6 +1,6 @@
 ## 插件目录
 
-link: [去文档](https://v3.nuxtjs.org/guide/directory-structure/plugins)
+link: [go to documentation](https://v3.nuxtjs.org/guide/directory-structure/plugins)
 
 Nuxt 将自动读取您 `plugins` 目录中的文件并加载它们。您可以在文件名中使用 `.server` 或 `.client` 后缀以仅在服务器或客户端加载插件。
 

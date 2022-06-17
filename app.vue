@@ -5,5 +5,7 @@
 </template>
 
 <style lang="scss">
-@import "assets/css/common";
+@import "assets/css/global/public";
+@import "assets/css/global/common";
+@import "assets/css/global/theme";
 </style>

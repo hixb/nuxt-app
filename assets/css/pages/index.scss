@@ -1,0 +1,299 @@
+.main {
+  @include pad-4(20px, 0, 0, 0);
+  @include area-w(1200px);
+  @include mar-2(0, auto);
+  @include flex;
+  @include flex-jus-spa-bet;
+  @include por;
+
+  .user-info {
+    @include box-s(var(--my-cur-default-theme-shadow));
+    @include area(370px, 100%);
+    @include pad-2(30px, 20px);
+    @include cursor(pointer);
+    @include trans;
+    @include bdr(10px);
+
+    &:hover {
+      @include trans;
+      @include box-s(var(--my-cur-default-theme-shadow-hover));
+    }
+
+    .my-info {
+      .info-avatar {
+        @include flex;
+        @include flex-jus-spa-aro;
+
+        img {
+          @include area(96px, 96px);
+        }
+      }
+
+      .info-name {
+        text-align: center;
+        @include mar-2(20px, 0);
+      }
+
+      .article-tag {
+        @include flex;
+        @include flex-jus-con-cen;
+        @include mar-3(0, 40px, 10px);
+
+        div {
+          @include area(80px, 50px);
+          @include flex;
+          @include flex-ali-center;
+          @include flex-jus-spa-aro;
+          flex-direction: column;
+        }
+
+        .art-num {
+          @include bd-r(1px, solid, var(--my-cur-default-theme-bor-color));
+        }
+      }
+    }
+
+    .category, .tag, .friend {
+      .title {
+        @include mar-2(20px, 0);
+        @include fz(16px);
+
+        i {
+          @include fz(18px);
+        }
+      }
+
+      ul {
+        li {
+          @include box-s(var(--my-cur-default-theme-shadow));
+          @include trans;
+          overflow: hidden;
+
+          &:hover {
+            @include box-s(var(--my-cur-default-theme-shadow-hover));
+            @include trans;
+            transform: scale(1.04);
+          }
+        }
+      }
+    }
+
+    .category {
+      @include bd-t(1px, solid, var(--my-cur-default-theme-bor-color));
+      @include bd-b(1px, solid, var(--my-cur-default-theme-bor-color));
+
+      ul {
+        li {
+          @include pad-2(7px, 13px);
+          @include mb(7px);
+          @include bdr(5px);
+
+
+          &:last-child {
+            @include mb(20px);
+          }
+
+          a {
+            @include flex;
+            @include flex-ali-center;
+            @include flex-jus-spa-bet;
+
+            span {
+              @include fz(16px);
+            }
+
+            em {
+              @include area(26px, 26px);
+              @include flex;
+              @include flex-ali-center;
+              @include flex-jus-spa-aro;
+              @include color(#fff);
+              @include bdr(5px);
+            }
+          }
+        }
+      }
+    }
+
+    .tag {
+      ul {
+        @include flex;
+
+        li {
+          @include bdr(5px);
+          @include pad-2(2px, 7px);
+          @include mr(8px);
+          @include mb(8px);
+
+          a {
+            span {
+              @include color(#fff);
+            }
+          }
+        }
+      }
+    }
+
+    .friend {
+      ul {
+        @include flex;
+
+        li {
+          @include bdr(5px);
+          @include pad-2(3px, 8px);
+          @include mr(8px);
+          @include mb(8px);
+          @include bgc(var(--my-cur-default-theme-bgc));
+          overflow: visible;
+
+          &:hover a .friend-box {
+            @include show-opa-vis;
+          }
+
+          a {
+            @include por;
+            @include flex;
+            @include flex-ali-center;
+
+            i {
+              @include area(5px, 5px);
+              @include mr(5px);
+              @include bdr(50%);
+            }
+
+            span {
+              @include color(var(--my-cur-default-theme-color));
+            }
+
+            .friend-box {
+              @include pos;
+              left: 50%;
+              bottom: 20px;
+              transform: translateX(-50%);
+              @include pad-2(13px, 16px);
+              @include bgc(var(--my-cur-default-theme-bgc));
+              @include z-i(10);
+              @include area(280px, 150px);
+              @include box-s(var(--my-cur-default-theme-shadow));
+              @include hide-opa-vis;
+              @include bdr(5px);
+
+              * {
+                @include color(var(--my-cur-default-theme-color));
+              }
+
+              .info-title {
+                @include area-h(32px);
+                @include flex;
+                @include flex-ali-center;
+                @include flex-jus-spa-bet;
+
+                .info {
+                  @include flex;
+                  @include flex-ali-center;
+
+                  img {
+                    @include area(32px, 32px);
+                    @include bdr(5px);
+                  }
+
+                  h4 {
+                    @include ml(10px);
+                    @include area-w(175px);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                  }
+                }
+
+                .link {
+                  @include area(25px, 25px);
+                  @include flex;
+                  @include flex-ali-center;
+                  @include flex-jus-spa-aro;
+                  @include bdr(5px);
+                  @include color(#fff);
+                }
+              }
+
+              .desc {
+                @include mar-4(10px, 0, 5px, 32px);
+                @include area-h(78px);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 4;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .offset-val {
+    @include ml(390px);
+  }
+
+  .menu-fixed {
+    position: fixed;
+    top: 80px;
+    @include area-h(auto);
+  }
+
+  article {
+    .article-link {
+      @include area-w(810px);
+      @include box-s(var(--my-cur-default-theme-shadow));
+      @include pad-2(20px, 35px);
+      @include bdr(10px);
+      @include trans;
+      overflow: hidden;
+      @include mb(20px);
+      display: block;
+
+      &:hover {
+        @include trans;
+        @include box-s(var(--my-cur-default-theme-shadow-hover));
+      }
+
+      .title {
+        @include area-h(40px);
+        @include lh(40px);
+      }
+
+      .description {
+        @include pad-2(16px, 20px);
+        @include area(740px, 100%);
+        @include mar-2(16px, 0);
+        @include bd-l(5px, solid, var(--my-bright-active-theme-color));
+        @include bgc(var(--my-cur-default-theme-oter));
+      }
+
+      .info {
+        @include mt(25px);
+
+        ul {
+          @include flex;
+
+          li {
+            @include flex;
+            @include flex-ali-center;
+            @include mr(15px);
+
+            span {
+              @include ml(3px);
+            }
+          }
+
+          .add-color {
+            &:hover * {
+              @include color(var(--my-bright-theme-color));
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -5,12 +5,11 @@ export const useCommonStore = defineStore({
   id: "common-store",
   state: (): COMMON => {
     return {
-      APP_NAME: "HELLO",
-      AVATAR: "https://notes.vueice.com/avatar.png"
+      MY_NAME: "dawnIceZhu",
+      APP_PROJECT_NAME: "dawnIceZhu's Notes",
+      APP_PROJECT_DESC: "People can skip meals for twelve days, But programming can’t stop writing for a day."
     };
   },
   actions: {},
-  getters: {
-    appName: state => state.APP_NAME
-  }
+  getters: {}
 });

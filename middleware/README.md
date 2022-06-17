@@ -1,6 +1,6 @@
 ## 中间件目录
 
-link: [去文档](https://v3.nuxtjs.org/guide/directory-structure/middleware)
+link: [go to documentation](https://v3.nuxtjs.org/guide/directory-structure/middleware)
 
 Nuxt 提供了一个可定制的路由中间件框架，您可以在整个应用程序中使用它，非常适合在导航到特定路由之前提取您想要运行的代码。
 

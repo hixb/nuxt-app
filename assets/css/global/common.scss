@@ -1,0 +1,108 @@
+::-webkit-scrollbar {
+  @include area(8px, 8px);
+}
+
+::-webkit-scrollbar {
+  @include area(5px, 5px);
+}
+
+::-webkit-scrollbar-thumb {
+  @include bdr(8px);
+  @include bgc(var(--my-bright-active-theme-color));
+}
+
+::-webkit-scrollbar-track-piece {
+  @include bgc(var(--my-cur-default-theme-bgc));
+  @include bdr(6px);
+}
+
+html,
+body {
+  @include area-w(100%);
+  @include min-w(1200px);
+  @include fz(14px);
+  @include color(var(--my-cur-default-theme-color));
+  @include bgc(var(--my-cur-default-theme-bgc));
+  font-family: "auto";
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  @include mar-1(0);
+  @include pad-1(0);
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  @include cursor(pointer);
+  @include text-transition-gradient;
+  @include color(var(--my-cur-default-theme-color));
+
+  &:hover {
+    opacity: var(--my-feat-opacity-hover);
+  }
+}
+
+i {
+  @include fz(normal);
+}
+
+img {
+  @include max-w(100%);
+}
+
+input,
+textarea {
+  @include cle-bd;
+  outline: none;
+  font-family: "Microsoft YaHei";
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+  box-shadow: inset 0 0 0 1000px #fff !important;
+}
+
+button {
+  outline: none;
+  @include cursor(pointer);
+  @include cle-bd;
+}
+
+em {
+  font-style: normal;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+em,
+i {
+  @include lh(1);
+}
+
+i {
+  @include color(var(--my-iconfont-theme-color));
+  @include fz(16px);
+}

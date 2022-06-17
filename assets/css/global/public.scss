@@ -1,0 +1,342 @@
+// 文字透明度和过渡
+@mixin text-transition-gradient {
+  opacity: var(--my-feat-opacity);
+  transition: var(--my-feat-transtion);
+}
+
+// 宽高
+@mixin area($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+// 宽
+@mixin area-w($w) {
+  width: $w;
+}
+
+// 高
+@mixin area-h($h) {
+  height: $h;
+}
+
+// 弹性布局
+@mixin flex {
+  display: flex;
+}
+
+// 弹性布局-垂直居中
+@mixin flex-ali-center {
+  align-items: center;
+}
+
+// 弹性布局-左右间隔
+@mixin flex-jus-spa-bet {
+  justify-content: space-between;
+}
+
+// 弹性布局-justify-content: space-around;
+@mixin flex-jus-spa-aro {
+  justify-content: space-around;
+}
+
+// 弹性布局-居中
+@mixin flex-jus-spa-eve {
+  justify-content: space-evenly;
+}
+
+// 弹性布局-元素靠近
+@mixin flex-jus-con-cen {
+  justify-content: center;
+}
+
+// 弹性布局-居右
+@mixin flex-jus-end {
+  justify-content: flex-end;
+}
+
+// 弹性布局-居左
+@mixin flex-jus-start {
+  justify-content: flex-start;
+}
+
+
+// 背景颜色
+@mixin bgc($c) {
+  background-color: $c;
+}
+
+// 颜色
+@mixin color($colors) {
+  color: $colors;
+}
+
+// 文字大小
+@mixin fz($z) {
+  font-size: $z;
+}
+
+// 右偏移值
+@mixin mr($r) {
+  margin-right: $r;
+}
+
+// 左偏移值
+@mixin ml($l) {
+  margin-left: $l;
+}
+
+// 下偏移值
+@mixin mb($b) {
+  margin-bottom: $b;
+}
+
+// 上偏移值
+@mixin mt($t) {
+  margin-top: $t;
+}
+
+// 偏移值-一个值
+@mixin mar-1($any) {
+  margin: $any;
+}
+
+// 偏移值-两个值
+@mixin mar-2($l, $t) {
+  margin: $l $t;
+}
+
+// 偏移值-三个值
+@mixin mar-3($l, $t, $r) {
+  margin: $l $t $r;
+}
+
+// 偏移值
+@mixin mar-4($t, $r, $b, $l) {
+  margin: $t $r $b $l;
+}
+
+// 内右距
+@mixin pr($r) {
+  padding-right: $r;
+}
+
+// 内左距
+@mixin pl($l) {
+  padding-left: $l;
+}
+
+// 内下距
+@mixin pb($b) {
+  padding-bottom: $b;
+}
+
+// 内下距
+@mixin pt($t) {
+  padding-top: $t;
+}
+
+// 内边距取值-一个值
+@mixin pad-1($any) {
+  padding: $any;
+}
+
+// 内边距取值-两个值
+@mixin pad-2($l, $t) {
+  padding: $l $t;
+}
+
+// 内边距取值-三个值
+@mixin pad-3($l, $t, $r) {
+  padding: $l $t $r;
+}
+
+// 内边距取值-四个值
+@mixin pad-4($t, $r, $b, $l) {
+  padding: $t $r $b $l;
+}
+
+// 鼠标指针
+@mixin cursor($v) {
+  cursor: $v;
+}
+
+// 行高
+@mixin lh($v) {
+  line-height: $v;
+}
+
+// 边框
+@mixin bd($px, $mode, $c) {
+  border: $px $mode $c;
+}
+
+// 左边框
+@mixin bd-l($px, $mode, $c) {
+  border-left: $px $mode $c;
+}
+
+// 右边框
+@mixin bd-r($px, $mode, $c) {
+  border-right: $px $mode $c;
+}
+
+// 上边框
+@mixin bd-t($px, $mode, $c) {
+  border-top: $px $mode $c;
+}
+
+// 下边框
+@mixin bd-b($px, $mode, $c) {
+  border-bottom: $px $mode $c;
+}
+
+// 清除边框
+@mixin cle-bd {
+  border: none;
+}
+
+// 最大宽
+@mixin max-w($w) {
+  max-width: $w;
+}
+
+// 最大高
+@mixin max-h($h) {
+  max-height: $h;
+}
+
+// 最小宽
+@mixin min-w($w) {
+  min-width: $w;
+}
+
+// 最小高
+@mixin min-h($h) {
+  min-height: $h;
+}
+
+// 最大宽高
+@mixin max-wh($w, $h) {
+  @include max-w($w);
+  @include max-h($h);
+}
+
+// 最小宽高
+@mixin min-wh($w, $h) {
+   @include min-w($w);
+   @include min-h($h)
+}
+
+// 圆角边框
+@mixin bdr($v) {
+  border-radius: $v;
+}
+
+// 相对定位
+@mixin por {
+  position: relative;
+}
+
+// 绝对定位
+@mixin pos {
+  position: absolute;
+}
+
+// 固定定位
+@mixin pof {
+  position: fixed;
+}
+
+// 盒子阴影
+@mixin box-s($v) {
+  box-shadow: $v;
+}
+
+// 过渡
+@mixin trans {
+  transition: var(--my-feat-transtion);
+
+  & {
+    transition: var(--my-feat-transtion);
+  }
+}
+
+// 不透明度
+@mixin opa($v) {
+  opacity: $v;
+}
+
+// 可见度
+@mixin vis($v) {
+  visibility: $v;
+}
+
+// 显示元素
+@mixin show-opa-vis {
+  @include opa(1);
+  @include vis(visible);
+  @include trans;
+}
+
+// 隐藏元素
+@mixin hide-opa-vis {
+  @include opa(0);
+  @include vis(hidden);
+  @include trans;
+}
+
+// z-index
+@mixin z-i($i) {
+  z-index: $i;
+}
+
+// 背景位置
+@mixin bgp($x, $y) {
+  background-position: $x $y;
+}
+
+// 背景大小
+@mixin bgs($v1, $v2) {
+  background-size: $v1, $v2;
+}
+
+// 字体粗细
+@mixin fw($v) {
+  font-weight: $v;
+}
+
+@mixin gradient-border {
+  backdrop-filter: blur(10px);
+  @include bdr(.5rem);
+  @include por;
+
+  &:before {
+    background-position: 0 0 !important;
+    background-size: 400%, auto !important;
+    @include bdr(.5rem);
+    bottom: 0;
+    content: "";
+    left: 0;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    @include opa(.5);
+    @include pad-1(2px);
+    @include pos;
+    right: 0;
+    top: 0;
+    transition: background-position .3s ease-in-out, opacity .2s ease-in-out;
+    @include area-w(100%);
+  }
+
+  &:hover:before {
+    background-position: -50% 0 !important;
+    opacity: 1 !important;
+  }
+
+  &:before {
+    background: linear-gradient(90deg, transparent, transparent 25%, #00dc82 50%, #36e4da 75%, #0047e1);
+  }
+}
+
+

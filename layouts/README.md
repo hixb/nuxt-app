@@ -1,6 +1,6 @@
 ## 布局目录
 
-link: [去文档](https://v3.nuxtjs.org/guide/directory-structure/layouts)
+link: [go to documentation](https://v3.nuxtjs.org/guide/directory-structure/layouts)
 
 Nuxt 提供了一个可定制的布局框架，您可以在整个应用程序中使用，非常适合将常见的 UI 或代码模式提取到可重用的布局组件中。
 
