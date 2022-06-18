@@ -101,7 +101,7 @@ useHead({
     <menu ref="menu" :class="['user-info', isFixed ? 'menu-fixed' : '']">
       <div class="my-info">
         <div class="info-avatar">
-          <img src="https://notes.vueice.com/avatar.png" alt="" >
+          <img src="https://notes.vueice.com/avatar.png" alt="" />
         </div>
         <h3 class="info-name">
           {{ commonStore.APP_PROJECT_NAME }}
@@ -119,7 +119,7 @@ useHead({
       </div>
       <div v-for="(item, index) in menuList" :key="index" :class="item.className">
         <p class="title">
-          <i :class="['iconfont', `ice-${item.icon}`]" />
+          <i :class="['iconfont', `ice-${item.icon}`]"></i>
           <span>{{ item.title }}</span>
         </p>
         <ul>
@@ -130,7 +130,7 @@ useHead({
             class="gradient-border"
           >
             <nuxt-link :to="item.ident !== 'friend' ? list.link : ''">
-              <i v-if="item.ident === 'friend'" :style="{ backgroundColor: list.bgc }" />
+              <i v-if="item.ident === 'friend'" :style="{ backgroundColor: list.bgc }"></i>
               <span>{{ list.name }}</span>
               <em v-if="item.ident === 'category'" :style="{ backgroundColor: list.bgc }">
                 {{ list.count }}
@@ -138,7 +138,7 @@ useHead({
               <div v-if="item.ident === 'friend'" class="friend-box">
                 <div class="info-title">
                   <div class="info">
-                    <img :src="list.avatar" alt="" >
+                    <img :src="list.avatar" alt="" />
                     <h4>{{ list.name }}</h4>
                   </div>
                   <span class="link" :style="{ backgroundColor: list.bgc }"> go </span>
@@ -163,11 +163,11 @@ useHead({
         <div class="info">
           <ul>
             <li>
-              <i class="iconfont ice-account" />
+              <i class="iconfont ice-account"></i>
               <span>{{ item.author }}</span>
             </li>
             <li>
-              <i class="iconfont ice-date" />
+              <i class="iconfont ice-date"></i>
               <span>{{ item.createtime }}</span>
             </li>
           </ul>

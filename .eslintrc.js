@@ -22,6 +22,20 @@ module.exports = {
     "vue/max-attributes-per-line": 0,
     "no-console": process.env.NODE_ENV === "production" ? "error" : "warn",
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["off"],
+    "vue/html-self-closing": [
+      "error",
+      {
+        html: {
+          void: "always",
+          normal: "never",
+          component: "always"
+        },
+        svg: "always",
+        math: "always"
+      }
+    ],
     "prettier/prettier": [
       "error",
       {
