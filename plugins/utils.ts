@@ -76,6 +76,6 @@ export const utils = {
   }
 };
 
-export default { getLocalStorage, setLocalStorage, removeLocalStorage };
+export { getLocalStorage, setLocalStorage, removeLocalStorage };
 
 // Vue.prototype.$utils = utils;

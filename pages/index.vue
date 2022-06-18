@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { useRouter, useState, ref } from "#imports";
+import { useRouter, useState, ref, onMounted } from "#imports";
 import { useCommonStore } from "~/store";
 import { useHead } from "#head";
 import { IMenuList, IListData } from "assets/interface/pages";
-import Banner from "~/components/common/Banner.vue";
 
 const menuList = ref<IMenuList[]>([
   {
@@ -78,11 +77,23 @@ const listData = ref<IListData[]>([
   }
 ]);
 
-const useIsFixed = () => useState<boolean>("useIsFixed", () => false);
+const useIsFixed = () => ref(false);
 
 const router = useRouter();
 const commonStore = useCommonStore();
-const isFixed = useIsFixed();
+const useRefElHeight = ref();
+
+let isFixed = useIsFixed();
+
+onMounted(() => {
+  try {
+    window.addEventListener("scroll", () => {
+      isFixed = window.scrollY >= parseInt(useRefElHeight.value["clientHeight"]) - 60;
+    });
+  } catch (err) {
+    console.log(err);
+  }
+});
 
 useHead({
   title: "My App",
@@ -96,7 +107,10 @@ useHead({
 </script>
 
 <template>
-  <Banner />
+  <div ref="useRefElHeight" class="banner">
+    <h2>{{ commonStore.APP_PROJECT_NAME }}</h2>
+    <p>{{ commonStore.APP_PROJECT_DESC }}</p>
+  </div>
   <main class="main">
     <menu ref="menu" :class="['user-info', isFixed ? 'menu-fixed' : '']">
       <div class="my-info">
@@ -129,7 +143,7 @@ useHead({
             :style="item.ident === 'tag' ? `background-color: ${list.bgc};` : ''"
             class="gradient-border"
           >
-            <nuxt-link :to="item.ident !== 'friend' ? list.link : ''">
+            <NuxtLink :to="item.ident !== 'friend' ? list.link : ''">
               <i v-if="item.ident === 'friend'" :style="{ backgroundColor: list.bgc }"></i>
               <span>{{ list.name }}</span>
               <em v-if="item.ident === 'category'" :style="{ backgroundColor: list.bgc }">
@@ -147,7 +161,7 @@ useHead({
                   {{ list.desc }}
                 </div>
               </div>
-            </nuxt-link>
+            </NuxtLink>
           </li>
         </ul>
       </div>

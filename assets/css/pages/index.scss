@@ -1,3 +1,25 @@
+.banner {
+  @include flex;
+  @include flex-ali-center;
+  flex-direction: column;
+  justify-content: center;
+  @include area-h(100vh);
+  background: url(https://notes.vueice.com/1.jpg) center center / cover no-repeat;
+
+  * {
+    @include color(var(--my-cur-default-theme-color));
+  }
+
+  h2 {
+    @include fz(35px);
+  }
+
+  p {
+    @include fz(21px);
+    @include mar-2(10px, 0);
+  }
+}
+
 .main {
   @include pad-4(20px, 0, 0, 0);
   @include area-w(1200px);

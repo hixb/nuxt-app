@@ -19,3 +19,11 @@ export interface IListData {
   author: string;
   createtime: string;
 }
+
+/**
+ * 头部颜色选择器
+ */
+export interface IColorPickerSelect {
+  id: number;
+  name: string;
+}
