@@ -5,9 +5,5 @@ declare module "*.vue" {
 }
 
 declare module "vue/types/vue" {
-  interface Vue {
-    $layer: any;
-    $loginModel: any;
-    $userProtocol: any;
-  }
+  interface Vue {}
 }

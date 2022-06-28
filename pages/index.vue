@@ -167,7 +167,7 @@ useHead({
       </div>
     </menu>
     <article :class="isFixed ? 'offset-val' : ''">
-      <NuxtLink v-for="(item, index) in listData" :key="index" :to="'/article/' + item.id" class="article-link gradient-border">
+      <NuxtLink v-for="(item, index) in listData" :key="index" :to="'/article-1/' + item.id" class="article-link gradient-border">
         <h2 class="title">
           {{ item.title }}
         </h2>
